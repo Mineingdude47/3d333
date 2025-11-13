@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "web-build/index.html",
+      "use": "@vercel/static",
+      "config": {
+        "maxDuration": 30
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/web-build/index.html"
+    }
+  ]
+}
